@@ -32,8 +32,6 @@ jobs:
           test -s site/application.js
           test -s site/src/import-map.json
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
