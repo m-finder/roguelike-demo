@@ -39,8 +39,32 @@
       height: 90px;
     }
 
+    #mobile-bottom-ad {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 50%;
+      bottom: 0;
+      width: 468px;
+      height: 60px;
+      overflow: hidden;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    #mobile-bottom-ad iframe {
+      display: block;
+      border: 0;
+      width: 468px;
+      height: 60px;
+    }
+
     @media (min-width: 1200px) and (pointer: fine) {
       #pc-side-ad { display: block; }
+    }
+
+    @media (max-width: 767px), (pointer: coarse) and (max-width: 1199px) {
+      #mobile-bottom-ad { display: block; }
     }
   </style>
 </head>
@@ -62,6 +86,19 @@
       };
     </script>
     <script src="https://bauval.org/22/769f89e33016cf0e9310812a40b97ce7"></script>
+  </div>
+
+  <div id="mobile-bottom-ad" aria-label="Advertisement">
+    <script>
+      atOptions = {
+        'key' : '8a6c493d0b85b5ba88c07432066ad7a4',
+        'format' : 'iframe',
+        'height' : 60,
+        'width' : 468,
+        'params' : {}
+      };
+    </script>
+    <script src="https://bauval.org/22/8a6c493d0b85b5ba88c07432066ad7a4"></script>
   </div>
 
   <script src="src/polyfills.bundle.js" charset="utf-8"></script>
